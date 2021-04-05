@@ -5,6 +5,10 @@ import { useState } from "react";
 
 function App() {
   const [appMode, setAppMode] = useState("pomodoro");
+  const [time, setTime] = useState(1500);
+  const [shortTime, setShortTime] = useState(300);
+  const [longTime, setLongTime] = useState(600);
+
   return (
     <div
       className={
@@ -16,7 +20,16 @@ function App() {
       }
     >
       <PomoBar />
-      <Timer mode={appMode} setMode={setAppMode} />
+      <Timer
+        mode={appMode}
+        setMode={setAppMode}
+        temps1={time}
+        setTemps={setTime}
+        temps2={shortTime}
+        setTemps2={setShortTime}
+        temps3={longTime}
+        setTemps3={setLongTime}
+      />
     </div>
   );
 }
