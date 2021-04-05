@@ -1,0 +1,57 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  width: 70vw;
+  margin-top: 100px;
+  border-radius: 5px;
+  color: white;
+}
+.modes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+}
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0px;
+  font-size: 110px;
+  font-weight: bold;
+}
+.selectedButton {
+  background-color: gray;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+.Start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: tomato;
+  border-style: none;
+  border-radius: 5px;
+  background-color: white;
+  font-weight: bold;
+  padding: 15px 40px;
+}

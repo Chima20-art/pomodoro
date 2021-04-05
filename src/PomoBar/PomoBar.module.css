@@ -1,0 +1,51 @@
+.bar {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: white;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logoText {
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-style: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+button:hover {
+  background-color: darkgray;
+}
+
+.buttonText {
+  color: white;
+  margin: 3px;
+}
