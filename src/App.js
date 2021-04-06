@@ -24,7 +24,7 @@ function App() {
         mode={appMode}
         setMode={setAppMode}
         temps1={time}
-        setTemps={setTime}
+        setTemps1={setTime}
         temps2={shortTime}
         setTemps2={setShortTime}
         temps3={longTime}

@@ -18,6 +18,23 @@ export default function Timer(props) {
     }
   };
 
+  useEffect(() => {
+    if (btnState === "Stop") {
+      const interval = setInterval(() => {
+        if (mode === "pomodoro" && temps1 > 0) {
+          setTemps1(temps1 - 1);
+        }
+        if (mode === "shortBreak" && temps2 > 0) {
+          setTemps2(temps2 - 1);
+        }
+        if (mode === "longBreak" && temps3 > 0) {
+          setTemps3(temps3 - 1);
+        }
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [temps1, temps2, temps3, setTemps1, setTemps2, setTemps3, btnState]);
+
   var convert = (x) => {
     var minutes = parseInt(x / 60);
     var seconds = x % 60;
