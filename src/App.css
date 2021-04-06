@@ -1,12 +1,12 @@
 .pomodoroMode {
-  background: tomato;
+  background: rgb(219, 82, 77);
   height: 100vh;
 }
 .shortBreakMode {
-  background: rgb(135, 238, 212);
+  background-color: rgb(70, 142, 145);
   height: 100vh;
 }
 .longBreakMode {
-  background: rgb(130, 198, 238);
+  background-color: #437ea8;
   height: 100vh;
 }

@@ -60,7 +60,11 @@ export default function Timer(props) {
               ? styles.mode + " " + styles.selectedButton
               : styles.mode
           }
-          onClick={() => setMode("pomodoro")}
+          onClick={() => {
+            setMode("pomodoro");
+            setBtnState("Start");
+            setTemps1(1500);
+          }}
         >
           <h1>Pomodoro</h1>
         </div>
@@ -70,7 +74,11 @@ export default function Timer(props) {
               ? styles.mode + " " + styles.selectedButton
               : styles.mode
           }
-          onClick={() => setMode("shortBreak")}
+          onClick={() => {
+            setMode("shortBreak");
+            setBtnState("Start");
+            setTemps2(300);
+          }}
         >
           <h1>Short Break</h1>
         </div>
@@ -80,7 +88,11 @@ export default function Timer(props) {
               ? styles.mode + " " + styles.selectedButton
               : styles.mode
           }
-          onClick={() => setMode("longBreak")}
+          onClick={() => {
+            setMode("longBreak");
+            setBtnState("Start");
+            setTemps3(600);
+          }}
         >
           <h1>Long Break</h1>{" "}
         </div>
