@@ -1,12 +1,22 @@
 import React from "react";
 import styles from "./Timer.module.css";
-import useState from "react";
-
+import { useState } from "react";
+import { useEffect } from "react";
 export default function Timer(props) {
+  const [btnState, setBtnState] = useState("Start");
+
   const { mode, setMode } = props;
   const { temps1, setTemps1 } = props;
   const { temps2, setTemps2 } = props;
   const { temps3, setTemps3 } = props;
+
+  var onChange = () => {
+    if (btnState === "Start") {
+      setBtnState("Stop");
+    } else {
+      setBtnState("Start");
+    }
+  };
 
   var convert = (x) => {
     var minutes = parseInt(x / 60);
@@ -20,6 +30,9 @@ export default function Timer(props) {
   var time1 = convert(temps1);
   var time2 = convert(temps2);
   var time3 = convert(temps3);
+
+  var timeChosen =
+    mode === "pomodoro" ? time1 : mode === "shortBreak" ? time2 : time3;
 
   return (
     <div className={styles.timer}>
@@ -55,13 +68,10 @@ export default function Timer(props) {
           <h1>Long Break</h1>{" "}
         </div>
       </div>
-      <div className={styles.time}>
-        {mode === "pomodoro" ? time1 : mode === "shortBreak" ? time2 : time3}
-      </div>
+      <div className={styles.time}>{timeChosen}</div>
       <div className={styles.button}>
-        <button className={styles.Start}>
-          {" "}
-          <h1>Start</h1>{" "}
+        <button className={styles.Start} onClick={() => onChange()}>
+          <h1>{btnState}</h1>
         </button>
       </div>
     </div>
