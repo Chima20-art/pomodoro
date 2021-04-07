@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./PomoBar.module.css";
+import Popup from "reactjs-popup";
 
 export default function PomoBar() {
   return (
@@ -14,10 +15,27 @@ export default function PomoBar() {
           <img className={styles.icon} src="/graph-white.png" />
           <a className={styles.buttonText}>Reports</a>
         </button>
-        <button className={styles.button}>
-          <img className={styles.icon} src="/config-white.png" />
-          <a className={styles.buttonText}>Settings</a>
-        </button>
+
+        <Popup
+          modal
+          trigger={
+            <button className={styles.button}>
+              <img className={styles.icon} src="/config-white.png" />
+              <a className={styles.buttonText}>Settings</a>
+            </button>
+          }
+          position="top left"
+        >
+          {(close) => (
+            <div className={styles.popupDiv}>
+              Content here
+              <a className={styles.close} onClick={close}>
+                &times;
+              </a>
+            </div>
+          )}
+        </Popup>
+
         <button className={styles.button}>
           <img className={styles.icon} src="/user-white.png" />
           <a className={styles.buttonText}>Log In</a>

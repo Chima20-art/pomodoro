@@ -49,3 +49,8 @@ button:hover {
   color: white;
   margin: 3px;
 }
+.popupDiv {
+  background-color: white;
+  height: min(80vh, 600px);
+  width: min(50vw, 400px);
+}
