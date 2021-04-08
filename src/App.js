@@ -19,7 +19,14 @@ function App() {
           : "longBreakMode"
       }
     >
-      <PomoBar />
+      <PomoBar
+        time={time}
+        setTime={setTime}
+        shortTime={shortTime}
+        setShortTime={setShortTime}
+        longTime={longTime}
+        setLongTime={setLongTime}
+      />
       <Timer
         mode={appMode}
         setMode={setAppMode}
